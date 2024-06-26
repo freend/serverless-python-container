@@ -89,6 +89,9 @@ mangum 에 대한 내용은 다음과 같습니다.
 
 > Mangum은 AWS Lambda와 같은 서버리스 환경에서 FastAPI와 같은 ASGI 애플리케이션을 실행할 수 있게 해주는 어댑터입니다. 이는 FastAPI와 같은 비동기 애플리케이션이 AWS Lambda의 서버리스 환경에서 실행될 수 있도록 중간에서 연결하는 역할을 합니다. 이를 통해 개발자는 FastAPI 애플리케이션을 AWS Lambda와 API Gateway를 통해 손쉽게 배포하고 운영할 수 있습니다.
 
+uvicorn은 컨테이너를 만들기 전 로컬에서 api가 정상적으로 작동하는지 확인하기 위해 있는 부분입니다.  
+로컬에서 확인하려면 `handler = Mangum(app)`을 주석처리하고 콘솔에서 실행해서 확인하면 됩니다.
+
 # Dockerfile
 
 lambda docker python의 Dockerfile의 기본내용은 다음과 같습니다.
